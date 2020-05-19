@@ -34,18 +34,18 @@ steps:
     #pip install -r requirements.txt
   displayName: 'Linux Commands'
 
-jobs:  
+jobs:
 - deployment: VMDeploy
   displayName: web
   environment:
-    name:  VMenv
+    name:  DeploymentEnvironment
     resourceType: VirtualMachine
-    tags: web1
+    tags: aws-server
   strategy:
-	  runOnce:                
-		deploy:
-		  steps:
-		  - script: echo Hello world
+    runOnce:
+      deploy:
+        steps:
+        - script: echo Hello world
 #- script: |
 #    python -m pip install --upgrade pip
 #    pip install -r requirements.txt
