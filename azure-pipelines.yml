@@ -12,7 +12,7 @@ jobs:
   environment:
     name:  DeploymentEnvironment
     resourceType: VirtualMachine
-    tags: aws-server
+    tags: aws-webserver
   strategy:
     runOnce:
       deploy:
